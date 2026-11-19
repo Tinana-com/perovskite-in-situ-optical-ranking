@@ -1,0 +1,11 @@
+{
+  "protocol_sha256": "e04c6525140470373e8b2e4b0ad4dfc46bbcc6588a672167a2fe457aace16839",
+  "selection_sha256": "d50503f6011b1c5b2ac9671b0d15b49b491f2d46a806be08163b86df779aded3",
+  "source_sha256": {
+    "p7_core.py": "86919044e3476e6bd78c54a86671f4bf56e4c31a0883b7119965a3f9e8c7039d",
+    "run_p7.py": "28b38d30ad43bd30644f2c607677c8384ba869b197fbbf2b7d1caebee73032d9"
+  },
+  "outer_evaluation_not_used_for_selection": true,
+  "history_not_used_for_selection": true,
+  "jointly_developed_on_two_datasets": true
+}

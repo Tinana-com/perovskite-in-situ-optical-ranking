@@ -1,0 +1,51 @@
+{
+  "M0_D1": [
+    "mean",
+    "std",
+    "early10_mean",
+    "late10_mean",
+    "late_minus_early",
+    "maximum",
+    "argmax_relative_index",
+    "relative_end_change",
+    "middle50_mean",
+    "relative_index_slope",
+    "integral_frame_index",
+    "total_abs_difference"
+  ],
+  "M0_D2": [
+    "LP725_mean",
+    "LP725_last",
+    "LP725_slope",
+    "LP780_mean",
+    "LP780_last",
+    "LP780_slope",
+    "SP775_mean",
+    "SP775_last",
+    "SP775_slope",
+    "ND_mean",
+    "ND_last",
+    "ND_slope"
+  ],
+  "new_trajectory_channels": {
+    "D1": [
+      "LP725"
+    ],
+    "D2": [
+      "LP725",
+      "LP780",
+      "SP775"
+    ]
+  },
+  "identifier_only": [
+    "sample_id",
+    "unit_id",
+    "split_group",
+    "patchID",
+    "foldNo",
+    "date",
+    "expID",
+    "substrateID"
+  ],
+  "forbidden": "all PCE at inference; voc/jsc/ff and other posterior features; patchID numeric/one-hot in M0-M3"
+}

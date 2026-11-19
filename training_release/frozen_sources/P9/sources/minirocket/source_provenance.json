@@ -1,0 +1,9 @@
+{
+  "commit": "0b1c245d9c9dbc50886f28bc7b32d5d45b5663d6",
+  "repository": "https://github.com/angus924/minirocket",
+  "files": [
+    "minirocket.py",
+    "LICENSE",
+    "README.md"
+  ]
+}

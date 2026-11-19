@@ -1,0 +1,345 @@
+{
+  "version": "P9_V1.1_R0_FROZEN",
+  "authorized_round": "R0",
+  "future_rounds_authorized": false,
+  "created_before_P9_M1_M2_M3_outer_results": true,
+  "git_head": "6704d79e9d3256f7210214debdf0ae58f9c428ee",
+  "seed": 20261019,
+  "threads": 1,
+  "data": {
+    "D1": {
+      "data_directory": "perovskite-ai-research/research/pl_public_data_pilot_01/data_external/D1",
+      "train_file": {
+        "name": "training_extracted_features_and_labels.h5",
+        "bytes": 10138216,
+        "sha256": "998c3f7e680082881cfd73ea20c82c6045ae4ebae8c556e6296120cd64662032"
+      },
+      "test_file": {
+        "name": "test_extracted_features_and_labels.h5",
+        "bytes": 5119912,
+        "sha256": "8e55611f29ddadb3c87c536c8b11db4a9f1306175e8433903c482965156a0dd5"
+      },
+      "folds": "author foldNo0..4, substrate constant",
+      "scope_dev": "D1_DEVELOPMENT_PREVIOUSLY_ACCESSED",
+      "scope_test": "D1_AUTHOR_TEST_PREVIOUSLY_INSPECTED",
+      "features": "P5 exact12 absolute+same12 relative by substrate; common24 for all PL-only models; IDPL56; ID32",
+      "pair_tolerance": "strict >0.5",
+      "baseline_source": "research/pl_public_data_pilot_05_d1_validation"
+    },
+    "D2": {
+      "data_path": "perovskite-ai-research/data/raw/kit_pl_2025/data.h5",
+      "data_sha256": "050bf429ae6145f0201b940a25c6b89c5cb1fcdf961adc310fe3a0037f436f05",
+      "data_bytes": 354689616,
+      "features_path": "research/pl_public_data_pilot_02/results/extracted_features.csv",
+      "features_sha256": "8bae9d68be45076d2eab5f59c7a047c536b9b5a75e6916717714b7ed98aa92be",
+      "development_dates": [
+        20230425,
+        20230502,
+        20230510,
+        20230516,
+        20230524,
+        20230531,
+        20230607,
+        20230613,
+        20230627,
+        20230704,
+        20230717,
+        20230808,
+        20230816,
+        20230822
+      ],
+      "outer_validation_dates": [
+        [
+          20230425,
+          20230808
+        ],
+        [
+          20230502,
+          20230627
+        ],
+        [
+          20230510,
+          20230822
+        ],
+        [
+          20230516,
+          20230717
+        ],
+        [
+          20230524,
+          20230816
+        ],
+        [
+          20230531,
+          20230704
+        ],
+        [
+          20230607,
+          20230613
+        ]
+      ],
+      "history_dates": [
+        20230829,
+        20230905,
+        20230912
+      ],
+      "scope_dev": "D2_DEVELOPMENT_REUSED_DATES",
+      "scope_test": "D2_HISTORY_PREVIOUSLY_INSPECTED",
+      "features": "P4 exact4channels mean/last/relative-index-slope, 12 absolute or12relative; common REL12 main; IDPL44",
+      "pair_tolerance": ">=0.5",
+      "baseline_source": "research/pl_public_data_pilot_04_position_audit"
+    }
+  },
+  "P6_protocol_sha256": "8dbb4cc6598d8c61a883f29c97c303437fef1e7d6a13cc975e4515156a25f71a",
+  "roles": {
+    "development": "DEVELOPMENT_REUSED",
+    "history": "PREVIOUSLY_INSPECTED_IDENTITY_ONLY; NOT_EVALUATED_IN_P9"
+  },
+  "reconciliation": {
+    "scores_atol": 1e-08,
+    "scores_rtol": 0,
+    "targets_atol": 1e-10,
+    "targets_rtol": 0,
+    "metrics_atol": 1e-08,
+    "metrics_rtol": 0,
+    "candidate_ID_set": "EXACT",
+    "outer_folds": "EXACT",
+    "Top25_selected_ID_sets": "EXACT",
+    "D2_raw_statistics_max_atol": 1e-07,
+    "on_substantive_difference": "BLOCK_BRANCH_KEEP_DIAGNOSIS"
+  },
+  "outer_folds": {
+    "D1": "unchanged author foldNo0..4 by substrate",
+    "D2": [
+      [
+        20230425,
+        20230808
+      ],
+      [
+        20230502,
+        20230627
+      ],
+      [
+        20230510,
+        20230822
+      ],
+      [
+        20230516,
+        20230717
+      ],
+      [
+        20230524,
+        20230816
+      ],
+      [
+        20230531,
+        20230704
+      ],
+      [
+        20230607,
+        20230613
+      ]
+    ]
+  },
+  "inner_selection": {
+    "downstream_C_candidates": [
+      1.0
+    ],
+    "extra_search": "NONE; no implementation need for second C",
+    "future_if_insufficient_groups": "INNER_CV_INSUFFICIENT_GROUPS, default C=1; never outer/historical targets"
+  },
+  "pairwise": {
+    "estimator": "sklearn.LogisticRegression",
+    "parameters": {
+      "C": 1.0,
+      "fit_intercept": false,
+      "solver": "lbfgs",
+      "tol": 1e-08,
+      "max_iter": 2000
+    },
+    "D1": "P6 unchanged strict abs(delta)>0.5; symmetric; substrate balanced",
+    "D2": "P6 unchanged abs(delta)>=0.5; symmetric; date then informative-experiment balanced",
+    "pair_ID_order": "same immutable p5/p4 implementations for all M0-M3",
+    "regularization_scale": "unchanged P6 weighted pair count; no pair sampling"
+  },
+  "preprocess": {
+    "length": 256,
+    "interpolation": "numpy.interp on linspace(0,1,n) to linspace(0,1,256); nearest finite endpoints",
+    "nonfinite": "finite-index interpolate within each trace; all invalid -> all0 and count; no row deletion",
+    "empty": "BLOCK_BRANCH; never drop",
+    "singleton": "constant repeated256",
+    "normalization": "z=(resampled-min)/(max-min), range<=1e-12 ->0 and count",
+    "dtype": "resampling float64; output contiguous float32 for MiniRocket",
+    "no_clipping_or_physical_seconds": true,
+    "StandardScaler": "fit on outer training optical rows; inner if selecting, re-fit in each inner fold"
+  },
+  "M0": {
+    "name": "P6_ABS_ERM",
+    "D1_features": [
+      "mean",
+      "std",
+      "early10_mean",
+      "late10_mean",
+      "late_minus_early",
+      "maximum",
+      "argmax_relative_index",
+      "relative_end_change",
+      "middle50_mean",
+      "relative_index_slope",
+      "integral_frame_index",
+      "total_abs_difference"
+    ],
+    "D2_features": [
+      "LP725_mean",
+      "LP725_last",
+      "LP725_slope",
+      "LP780_mean",
+      "LP780_last",
+      "LP780_slope",
+      "SP775_mean",
+      "SP775_last",
+      "SP775_slope",
+      "ND_mean",
+      "ND_last",
+      "ND_slope"
+    ],
+    "new_fit_R0": true,
+    "no_position": true,
+    "no_new_selection": true
+  },
+  "M1": {
+    "name": "P6_PLUS_SHAPE",
+    "status": "NOT_YET_RUN_R1_NOT_AUTHORIZED",
+    "channels": {
+      "D1": [
+        "LP725"
+      ],
+      "D2": [
+        "LP725",
+        "LP780",
+        "SP775"
+      ]
+    },
+    "input": "self-normalized 256-point relative-frame trace z",
+    "families": {
+      "piecewise_trend_contrast": {
+        "dimensions": 1,
+        "formula": "OLS_slope(z[192:256],u[192:256])-OLS_slope(z[0:64],u[0:64]); u=linspace(0,1,256)"
+      },
+      "local_curvature_energy": {
+        "dimensions": 1,
+        "formula": "mean((z[t+2]-2*z[t+1]+z[t])**2), t=0..253"
+      },
+      "directional_step_fractions": {
+        "dimensions": 2,
+        "formula": "mean(diff(z)>1e-8), mean(diff(z)<-1e-8); denominators255"
+      }
+    },
+    "new_dims_per_PL_channel": 4,
+    "deduplication": "D1 argmax, total abs difference, global slope and endpoint contrasts already present -> not duplicated; D2 global mean,last,slope retained only in M0; curvature, local trend difference, signed fractions absent in both actual P6 code",
+    "M1_total_dims": {
+      "D1": 16,
+      "D2": 24
+    }
+  },
+  "M2": {
+    "name": "MINIROCKET_PAIRWISE",
+    "status": "NOT_YET_RUN_R1_NOT_AUTHORIZED",
+    "upstream": {
+      "commit": "0b1c245d9c9dbc50886f28bc7b32d5d45b5663d6",
+      "repository": "https://github.com/angus924/minirocket",
+      "files": [
+        "minirocket.py",
+        "LICENSE",
+        "README.md"
+      ]
+    },
+    "license": "GPL-3.0 upstream LICENSE preserved, source unmodified",
+    "interface": "fit(X_float32[n_train,256], num_features=1008, max_dilations_per_kernel=32); transform(X,parameters)",
+    "channels": {
+      "D1": [
+        "LP725"
+      ],
+      "D2": [
+        "LP725",
+        "LP780",
+        "SP775"
+      ]
+    },
+    "ND": "Not a PL trajectory; excluded from new shape/MiniRocket representation; M0/M3 retain original ND absolute stats. This input difference is explicit.",
+    "num_features_per_channel": 1008,
+    "actual_feature_count": 1008,
+    "max_dilations_per_kernel": 32,
+    "training_only_fit": true,
+    "channel_handling": "independent per actual PL channel then concatenate; separate dataset/fold weights; no spectral interpolation",
+    "randomness": "seed Numba RNG from a compiled np.random.seed(20261019) helper immediately before each upstream fit, single thread; upstream biases algorithm unchanged",
+    "high_dimensional_constraint": "one fixed output cap1008 per channel; no PCA/feature-selection search or second reducer",
+    "total_dims": {
+      "D1": 1008,
+      "D2": 3024
+    },
+    "fit_on_real_data_in_R0": false
+  },
+  "M3": {
+    "name": "P6_PLUS_MINIROCKET",
+    "status": "NOT_YET_RUN_R1_NOT_AUTHORIZED",
+    "formula": "M0 absolute block concatenated with M2 shape block, training-only StandardScaler and identical P6 pair logistic",
+    "total_dims": {
+      "D1": 1020,
+      "D2": 3036
+    }
+  },
+  "metrics": {
+    "primary": "top25_gain_pp",
+    "others": [
+      "rho",
+      "top25_overlap"
+    ],
+    "k": "ceil(n/4)",
+    "ties": "stable sample_id",
+    "constant_rho": "NA, never0",
+    "D1": "substrate equal",
+    "D2": "experiment equal within date, then date equal",
+    "minimum_labeled_per_unit": 4,
+    "failure_tails": [
+      "minimum",
+      "q05_linear",
+      "q10_linear",
+      "negative_gain_groups",
+      "worse_vs_M0_groups"
+    ],
+    "CI": "10000 paired bootstrap independent D1 substrate / D2 date; descriptive reused-data only"
+  },
+  "references": {
+    "source": "P6 frozen development OOF predictions; exact same IDs/folds before comparison",
+    "models": [
+      "ID_PAIRWISE",
+      "EXTRATREES_PL",
+      "LGBM_PL",
+      "PL_INTENSITY",
+      "AUTHOR_KNN_AUX_D1_OR_F2_RIDGE_AUX_D2"
+    ],
+    "no_new_position_fusion": true
+  },
+  "budget": {
+    "CPU_wall_seconds_cumulative": 28800,
+    "peak_memory_GiB": 12,
+    "execution_priority": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "on_limit": "NOT_RUN_RESOURCE; no architecture swap",
+    "R0_only": "M0 and audit; no M1-M3 fitted even if budget remains"
+  },
+  "selection": "No family winner selection or fusion; report all M0-M3 when R1 authorized; no outer/historical tuning",
+  "cloud": {
+    "parent_id": "1YRxvGFF8Q8qNiYFyS0CDIV360Aqs6hEZ",
+    "handoff_folder_id": "1eWdLYQwDe8huQMJfgbDLpoNOOpej7EDx",
+    "folder_url": "https://drive.google.com/drive/folders/1eWdLYQwDe8huQMJfgbDLpoNOOpej7EDx",
+    "R0_file": "PL_P9_HANDOFF_R0.zip",
+    "package_upload_status": "UPLOAD_PENDING",
+    "rotation": "Only workflow-owned P9 ZIP IDs in verified folder, new remote SHA verified AND old reviewed AND next round explicitly authorized; otherwise preserve"
+  }
+}

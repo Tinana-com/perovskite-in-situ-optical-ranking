@@ -1,0 +1,23 @@
+dataset,ablation,method_a,method_b,status,note
+D1,A_INPUT,PL_PAIRWISE,ID_PAIRWISE,RUN,
+D1,A_INPUT,ID_PLUS_PL_PAIRWISE,ID_PAIRWISE,RUN,
+D1,A_INPUT,ID_PLUS_PL_PAIRWISE,PL_PAIRWISE,RUN,
+D1,A_INPUT,EXTRATREES_IDPL,EXTRATREES_PL,RUN,
+D1,A_INPUT,HISTGB_IDPL,HISTGB_PL,RUN,
+D1,A_RELATIVE,PAIR_REL,PAIR_ABS,RUN,
+D1,A_RELATIVE,PL_PAIRWISE,PAIR_REL,RUN,
+D1,A_OBJECTIVE,PL_PAIRWISE,RIDGE_PL,RUN,Same optical input; supervised objectives and training weights differ
+D2,A_INPUT,PL_PAIRWISE,ID_PAIRWISE,RUN,
+D2,A_INPUT,ID_PLUS_PL_PAIRWISE,ID_PAIRWISE,RUN,
+D2,A_INPUT,ID_PLUS_PL_PAIRWISE,PL_PAIRWISE,RUN,
+D2,A_INPUT,EXTRATREES_IDPL,EXTRATREES_PL,RUN,
+D2,A_INPUT,HISTGB_IDPL,HISTGB_PL,RUN,
+D2,A_RELATIVE,PL_PAIRWISE,PAIR_ABS,RUN,
+D2,A_RELATIVE,PAIR_BOTH,PL_PAIRWISE,RUN,
+D2,A_OBJECTIVE,PL_PAIRWISE,RIDGE_PL,RUN,Same optical input; supervised objectives and training weights differ
+D1,A_TEMPORAL,PAIR_EARLY25,PL_PAIRWISE,RUN,Window recomputed before all summaries/normalization; frame proportion only
+D1,A_TEMPORAL,PAIR_LATE25,PL_PAIRWISE,RUN,Window recomputed before all summaries/normalization; frame proportion only
+D1,A_DYNAMIC,PAIR_LEVEL,PL_PAIRWISE,RUN,Frozen disjoint subsets; absolute+relative block
+D1,A_DYNAMIC,PAIR_DYNAMIC,PL_PAIRWISE,RUN,Frozen disjoint subsets; absolute+relative block
+D2,A_TEMPORAL,NOT_RUN,NOT_APPLICABLE,NOT_RUN,D2 auxiliary scope uses original12 summaries; D1-only full ablations; D2 new-fit cap8
+D2,A_DYNAMIC,NOT_RUN,NOT_APPLICABLE,NOT_RUN,D2 auxiliary scope uses original12 summaries; D1-only full ablations; D2 new-fit cap8

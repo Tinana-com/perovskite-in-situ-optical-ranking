@@ -1,0 +1,14 @@
+outputs/
+downloads/
+dist/
+AUDIT/
+.numba_cache/
+.venv/
+__pycache__/
+*.pyc
+*.nbc
+*.nbi
+**/.mplconfig/
+**/.numba_cache/
+paper_analysis/REPRODUCED/
+paper_analysis/RUN_RECEIPTS/

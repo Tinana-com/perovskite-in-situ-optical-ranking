@@ -1,0 +1,9 @@
+view_id,absolute,relative,position,relative_gate,position_gate,C
+ABS,True,False,False,1.0,0.25,1.0
+REL,False,True,False,1.0,0.25,1.0
+DUAL,True,True,False,1.0,0.25,1.0
+POS_ABS,True,False,True,1.0,0.25,1.0
+POS_REL,False,True,True,1.0,0.25,1.0
+POS_DUAL,True,True,True,1.0,0.25,1.0
+GATED_DUAL,True,True,False,0.25,0.25,1.0
+GATED_POS_DUAL,True,True,True,0.25,0.25,1.0

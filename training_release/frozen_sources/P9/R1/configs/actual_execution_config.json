@@ -1,0 +1,37 @@
+{
+  "round": "R1",
+  "authorization": "Human user confirms R0 independently reviewed; R1 authorized, R2 not authorized",
+  "frozen_protocol_sha256": "4cbb4560df735b656e993c72c375bd8606909d7f95b609d08a5537afb57490e6",
+  "frozen_matrix_sha256": "e8a289b38762fcbd3b5f6473664b06729c2d1b6701f09f0e72edf7f564ab4d11",
+  "models": [
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "seed": 20261019,
+  "threads": 1,
+  "C": 1.0,
+  "no_search": true,
+  "source_model_grid_role": "historical_traceability_ONLY; never new family training grid",
+  "new_feature_dimensions": {
+    "D1": {
+      "M0": 12,
+      "M1": 16,
+      "M2": 1008,
+      "M3": 1020
+    },
+    "D2": {
+      "M0": 12,
+      "M1": 24,
+      "M2": 3024,
+      "M3": 3036
+    }
+  },
+  "cold_runs_R1": 1,
+  "R2_final_two_replays": "NOT_AUTHORIZED",
+  "budget_total_seconds": 28800,
+  "prior_R0_main_wall_seconds": 60.61032630000045,
+  "peak_target_GiB": 12,
+  "status": "FROZEN_BEFORE_R1_MODEL_SCORES"
+}

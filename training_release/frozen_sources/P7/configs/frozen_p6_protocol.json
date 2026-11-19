@@ -1,0 +1,240 @@
+{
+  "version": "1.0",
+  "created_local_date": "2026-10-19",
+  "seed": 20261019,
+  "git_head": "6704d79e9d3256f7210214debdf0ae58f9c428ee",
+  "history_paths": [
+    "perovskite-ai-research/research/pl_public_data_pilot_01",
+    "research/pl_public_data_pilot_02",
+    "research/pl_public_data_pilot_03",
+    "research/pl_public_data_pilot_04",
+    "research/pl_public_data_pilot_04_position_audit",
+    "research/pl_public_data_pilot_05_d1_validation"
+  ],
+  "D1": {
+    "data_directory": "perovskite-ai-research/research/pl_public_data_pilot_01/data_external/D1",
+    "train_file": {
+      "name": "training_extracted_features_and_labels.h5",
+      "bytes": 10138216,
+      "sha256": "998c3f7e680082881cfd73ea20c82c6045ae4ebae8c556e6296120cd64662032"
+    },
+    "test_file": {
+      "name": "test_extracted_features_and_labels.h5",
+      "bytes": 5119912,
+      "sha256": "8e55611f29ddadb3c87c536c8b11db4a9f1306175e8433903c482965156a0dd5"
+    },
+    "folds": "author foldNo0..4, substrate constant",
+    "scope_dev": "D1_DEVELOPMENT_PREVIOUSLY_ACCESSED",
+    "scope_test": "D1_AUTHOR_TEST_PREVIOUSLY_INSPECTED",
+    "features": "P5 exact12 absolute+same12 relative by substrate; common24 for all PL-only models; IDPL56; ID32",
+    "pair_tolerance": "strict >0.5",
+    "baseline_source": "research/pl_public_data_pilot_05_d1_validation"
+  },
+  "D2": {
+    "data_path": "perovskite-ai-research/data/raw/kit_pl_2025/data.h5",
+    "data_sha256": "050bf429ae6145f0201b940a25c6b89c5cb1fcdf961adc310fe3a0037f436f05",
+    "data_bytes": 354689616,
+    "features_path": "research/pl_public_data_pilot_02/results/extracted_features.csv",
+    "features_sha256": "8bae9d68be45076d2eab5f59c7a047c536b9b5a75e6916717714b7ed98aa92be",
+    "development_dates": [
+      20230425,
+      20230502,
+      20230510,
+      20230516,
+      20230524,
+      20230531,
+      20230607,
+      20230613,
+      20230627,
+      20230704,
+      20230717,
+      20230808,
+      20230816,
+      20230822
+    ],
+    "outer_validation_dates": [
+      [
+        20230425,
+        20230808
+      ],
+      [
+        20230502,
+        20230627
+      ],
+      [
+        20230510,
+        20230822
+      ],
+      [
+        20230516,
+        20230717
+      ],
+      [
+        20230524,
+        20230816
+      ],
+      [
+        20230531,
+        20230704
+      ],
+      [
+        20230607,
+        20230613
+      ]
+    ],
+    "history_dates": [
+      20230829,
+      20230905,
+      20230912
+    ],
+    "scope_dev": "D2_DEVELOPMENT_REUSED_DATES",
+    "scope_test": "D2_HISTORY_PREVIOUSLY_INSPECTED",
+    "features": "P4 exact4channels mean/last/relative-index-slope, 12 absolute or12relative; common REL12 main; IDPL44",
+    "pair_tolerance": ">=0.5",
+    "baseline_source": "research/pl_public_data_pilot_04_position_audit"
+  },
+  "model_grid_sha256": "0bc77bc29ae13400acd74ec0ec2d4e39fa48506de5dd6fc364a1058cc1f5c3bb",
+  "ablation_matrix_sha256": "2f9d735322f19ee2a52dcea2d822439bb6e410b06834ee76d0d69371ea2111ae",
+  "models": {
+    "RIDGE": {
+      "alpha": 10.0
+    },
+    "EXTRATREES": {
+      "n_estimators": 200,
+      "min_samples_leaf": 3,
+      "max_features": 1.0,
+      "random_state": 20261019,
+      "n_jobs": 1
+    },
+    "HISTGB": {
+      "max_iter": 150,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15,
+      "l2_regularization": 1.0,
+      "random_state": 20261019,
+      "early_stopping": false
+    },
+    "PAIRWISE": {
+      "C": 1.0,
+      "fit_intercept": false,
+      "solver": "lbfgs",
+      "tol": 1e-08,
+      "max_iter": 2000
+    },
+    "LGBM": {
+      "objective": "lambdarank",
+      "n_estimators": 150,
+      "learning_rate": 0.05,
+      "num_leaves": 15,
+      "min_child_samples": 10,
+      "random_state": 20261019,
+      "n_jobs": 1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    }
+  },
+  "lightgbm_version": "4.6.0",
+  "lightgbm_install": "P6/.deps only, no change to historical environment",
+  "categories": [
+    11,
+    12,
+    13,
+    14,
+    21,
+    22,
+    23,
+    24,
+    31,
+    32,
+    33,
+    34,
+    41,
+    42,
+    43,
+    44,
+    51,
+    52,
+    53,
+    54,
+    61,
+    62,
+    63,
+    64,
+    71,
+    72,
+    73,
+    74,
+    81,
+    82,
+    83,
+    84
+  ],
+  "D1_statistics": [
+    "mean",
+    "std",
+    "early10_mean",
+    "late10_mean",
+    "late_minus_early",
+    "maximum",
+    "argmax_relative_index",
+    "relative_end_change",
+    "middle50_mean",
+    "relative_index_slope",
+    "integral_frame_index",
+    "total_abs_difference"
+  ],
+  "level_statistics": [
+    "mean",
+    "early10_mean",
+    "late10_mean",
+    "maximum",
+    "middle50_mean",
+    "integral_frame_index"
+  ],
+  "dynamic_statistics": [
+    "std",
+    "late_minus_early",
+    "argmax_relative_index",
+    "relative_end_change",
+    "relative_index_slope",
+    "total_abs_difference"
+  ],
+  "D1_window": "full719, firstceil(.25*719)=180, last180; clean within selected window only; compute all12 statistics afresh using window length, frame-index only",
+  "nonfinite_policy": "per-window linear interpolation by frame index, nearest finite endpoints; allnonfinite ->0; preserve rows; D2 published finite12-stat cache hash verified",
+  "relative_formula": "(x-current optical unit median)/max(1.4826*current optical unit MAD,max(1e-12,0.01*median(abs(TRAIN optical x))))",
+  "scaler": "StandardScaler fit on all training optical rows only, same for all families and input variant; ID one-hot then PL blocks; no target/group values are numeric inputs",
+  "regression_weights": "D1 each substrate equal; D2 date equal then experiment equal; each labeled patch in unit equal; normalize mean sample weight1",
+  "pairwise_weights": "P5/P4.1 original contribution balance unchanged, exact copied pair construction functions; same identities across feature ablations; symmetric orientation",
+  "lambda_relevance": "training-unit average-rank y: clip(floor(5*(rank-1)/max(n-1,1)),0,4), integer; sorted unit_id+sample_id contiguous queries; original IDs restore; default label_gain; no validation labels/relevance at prediction",
+  "metrics": {
+    "primary": "top25_gain_pp",
+    "others": [
+      "rho",
+      "top25_overlap"
+    ],
+    "k": "ceil(n/4)",
+    "ties": "stable sample_id",
+    "constant_rho": "NA, never0",
+    "D1": "substrate equal",
+    "D2": "experiment equal within date, then date equal"
+  },
+  "bootstrap": {
+    "unit": "D1 substrate / D2 date",
+    "replicates": 10000,
+    "seed": 20261019,
+    "meaning": "descriptive reused-group intervals, not independent blind validation"
+  },
+  "selection": "engineering ranking among MAIN models plus frozen baselines by development Top25 gain, then rho, then overlap, then model_id; no test labels; report all main candidates; not final scientific algorithm choice",
+  "historical_test_policy": "all predefined comparisons evaluated after development-only selection; save scores_before_label_merge before scoring; no test tuning; second run identical replay",
+  "baseline_handling": "D1 P5 four nonpair controls frozen scores, three pair models refit+reconcile; D2 all P4.1 pair controls frozen+verified, original pair constructions used newABS/BOTH; P4 inner-selected intensity rule frozen; random analytic expectation+variance",
+  "limits": {
+    "D1_new_configs": 17,
+    "D2_new_configs": 8,
+    "families": 5,
+    "threads": 1,
+    "total_two_run_wall_budget_seconds": 14400,
+    "peak_memory_target_GB": 12
+  },
+  "no_P7": true
+}

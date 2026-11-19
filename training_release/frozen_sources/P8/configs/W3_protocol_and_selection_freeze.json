@@ -1,0 +1,11 @@
+{
+  "protocol_sha256": "93d4d17395caa38a69fe8915cd21c5a242b1c857edb17fcf10da1261335caf45",
+  "selection_sha256": "758a98568e7fa4052c33385974449162685d51107261237949243408ff9f1e68",
+  "main_source_sha256": {
+    "p8_core.py": "677b242639be1df189bf7cc81cec3dc2cf760cbbe7e8d3745c62e5f3deee146f",
+    "run_p8.py": "36109a8c436aaf83bd85a5eabf1f0318e0b0834f0e4a49cde3822eeef523de54"
+  },
+  "outer_candidate_outcomes_used": false,
+  "history_outcomes_used": false,
+  "final_endpoint": "P8_SELECTED"
+}

@@ -1,0 +1,5 @@
+sample_id,substrate,patchID,outer_fold,measured_PCE_percent,channel,n_frames,case,extremum
+D1::ACD::74,ACD,74,2,7.5749999999999993,LP725,719,median_positive,lowest_PCE
+D1::ACD::43,ACD,43,2,13.470000000000001,LP725,719,median_positive,highest_PCE
+D1::AEM::21,AEM,21,3,0.45500000000000002,LP725,719,negative_gain,lowest_PCE
+D1::AEM::64,AEM,64,3,13.84,LP725,719,negative_gain,highest_PCE

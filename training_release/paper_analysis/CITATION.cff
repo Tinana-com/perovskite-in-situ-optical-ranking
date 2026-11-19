@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this code release and the original dataset records."
+title: "Regional photovoltaic performance ranking from in situ optical monitoring analysis code"
+type: software
+version: "1.0"
+date-released: "2026-11-02"
+authors:
+  - family-names: Chen
+    given-names: Yutian
+    affiliation: "The School of Information Science and Technology, Fudan University, Shanghai, China"
+license: MIT

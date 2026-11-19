@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this code and the original public datasets."
+title: "In situ optical regional ranking training and reproduction code"
+type: software
+version: "1.0"
+authors:
+  - family-names: Chen
+    given-names: Yutian
+license: GPL-3.0-only
