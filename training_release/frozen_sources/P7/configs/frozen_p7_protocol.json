@@ -1,0 +1,373 @@
+{
+  "version": "1.0",
+  "created_local_date": "2026-10-19",
+  "seed": 20261019,
+  "git_head": "6704d79e9d3256f7210214debdf0ae58f9c428ee",
+  "P6_directory": "research/pl_public_data_pilot_06_baselines_ablations",
+  "P6_bundle_sha256": "a91b669f2c5e96613531907cb0cd65d5dae5d6bf10698236d77afe23d01322a3",
+  "D1": {
+    "data_directory": "perovskite-ai-research/research/pl_public_data_pilot_01/data_external/D1",
+    "train_file": {
+      "name": "training_extracted_features_and_labels.h5",
+      "bytes": 10138216,
+      "sha256": "998c3f7e680082881cfd73ea20c82c6045ae4ebae8c556e6296120cd64662032"
+    },
+    "test_file": {
+      "name": "test_extracted_features_and_labels.h5",
+      "bytes": 5119912,
+      "sha256": "8e55611f29ddadb3c87c536c8b11db4a9f1306175e8433903c482965156a0dd5"
+    },
+    "folds": "author foldNo0..4, substrate constant",
+    "scope_dev": "D1_DEVELOPMENT_PREVIOUSLY_ACCESSED",
+    "scope_test": "D1_AUTHOR_TEST_PREVIOUSLY_INSPECTED",
+    "features": "P5 exact12 absolute+same12 relative by substrate; common24 for all PL-only models; IDPL56; ID32",
+    "pair_tolerance": "strict >0.5",
+    "baseline_source": "research/pl_public_data_pilot_05_d1_validation"
+  },
+  "D2": {
+    "data_path": "perovskite-ai-research/data/raw/kit_pl_2025/data.h5",
+    "data_sha256": "050bf429ae6145f0201b940a25c6b89c5cb1fcdf961adc310fe3a0037f436f05",
+    "data_bytes": 354689616,
+    "features_path": "research/pl_public_data_pilot_02/results/extracted_features.csv",
+    "features_sha256": "8bae9d68be45076d2eab5f59c7a047c536b9b5a75e6916717714b7ed98aa92be",
+    "development_dates": [
+      20230425,
+      20230502,
+      20230510,
+      20230516,
+      20230524,
+      20230531,
+      20230607,
+      20230613,
+      20230627,
+      20230704,
+      20230717,
+      20230808,
+      20230816,
+      20230822
+    ],
+    "outer_validation_dates": [
+      [
+        20230425,
+        20230808
+      ],
+      [
+        20230502,
+        20230627
+      ],
+      [
+        20230510,
+        20230822
+      ],
+      [
+        20230516,
+        20230717
+      ],
+      [
+        20230524,
+        20230816
+      ],
+      [
+        20230531,
+        20230704
+      ],
+      [
+        20230607,
+        20230613
+      ]
+    ],
+    "history_dates": [
+      20230829,
+      20230905,
+      20230912
+    ],
+    "scope_dev": "D2_DEVELOPMENT_REUSED_DATES",
+    "scope_test": "D2_HISTORY_PREVIOUSLY_INSPECTED",
+    "features": "P4 exact4channels mean/last/relative-index-slope, 12 absolute or12relative; common REL12 main; IDPL44",
+    "pair_tolerance": ">=0.5",
+    "baseline_source": "research/pl_public_data_pilot_04_position_audit"
+  },
+  "categories": [
+    11,
+    12,
+    13,
+    14,
+    21,
+    22,
+    23,
+    24,
+    31,
+    32,
+    33,
+    34,
+    41,
+    42,
+    43,
+    44,
+    51,
+    52,
+    53,
+    54,
+    61,
+    62,
+    63,
+    64,
+    71,
+    72,
+    73,
+    74,
+    81,
+    82,
+    83,
+    84
+  ],
+  "scope_development": "DEVELOPMENT_REUSED_NESTED_OOF",
+  "scope_history": "HISTORY_PREVIOUSLY_INSPECTED",
+  "outer_folds": "Original P6 D1 author5fold / D2 seven date folds, unchanged",
+  "inner_folds": "GroupKFold(3) on OUTER TRAIN labels, grouped substrate/date; all current-unit optical context legal, scaler/floor fitted inner train only",
+  "W1_views": [
+    {
+      "view_id": "ABS",
+      "absolute": true,
+      "relative": false,
+      "position": false,
+      "relative_gate": 1.0,
+      "position_gate": 0.25,
+      "C": 1.0
+    },
+    {
+      "view_id": "REL",
+      "absolute": false,
+      "relative": true,
+      "position": false,
+      "relative_gate": 1.0,
+      "position_gate": 0.25,
+      "C": 1.0
+    },
+    {
+      "view_id": "DUAL",
+      "absolute": true,
+      "relative": true,
+      "position": false,
+      "relative_gate": 1.0,
+      "position_gate": 0.25,
+      "C": 1.0
+    },
+    {
+      "view_id": "POS_ABS",
+      "absolute": true,
+      "relative": false,
+      "position": true,
+      "relative_gate": 1.0,
+      "position_gate": 0.25,
+      "C": 1.0
+    },
+    {
+      "view_id": "POS_REL",
+      "absolute": false,
+      "relative": true,
+      "position": true,
+      "relative_gate": 1.0,
+      "position_gate": 0.25,
+      "C": 1.0
+    },
+    {
+      "view_id": "POS_DUAL",
+      "absolute": true,
+      "relative": true,
+      "position": true,
+      "relative_gate": 1.0,
+      "position_gate": 0.25,
+      "C": 1.0
+    },
+    {
+      "view_id": "GATED_DUAL",
+      "absolute": true,
+      "relative": true,
+      "position": false,
+      "relative_gate": 0.25,
+      "position_gate": 0.25,
+      "C": 1.0
+    },
+    {
+      "view_id": "GATED_POS_DUAL",
+      "absolute": true,
+      "relative": true,
+      "position": true,
+      "relative_gate": 0.25,
+      "position_gate": 0.25,
+      "C": 1.0
+    }
+  ],
+  "W2_modules": [
+    {
+      "module_id": "BASE",
+      "topk_boost": 1.0,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.0,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": false
+    },
+    {
+      "module_id": "TOP2",
+      "topk_boost": 2,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.0,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": false
+    },
+    {
+      "module_id": "TOP4",
+      "topk_boost": 4,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.0,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": false
+    },
+    {
+      "module_id": "LIST10",
+      "topk_boost": 1.0,
+      "listwise_lambda": 0.1,
+      "cvar_eta": 0.0,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": false
+    },
+    {
+      "module_id": "TOP2_LIST10",
+      "topk_boost": 2,
+      "listwise_lambda": 0.1,
+      "cvar_eta": 0.0,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": false
+    },
+    {
+      "module_id": "CVAR25",
+      "topk_boost": 1.0,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.25,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": false
+    },
+    {
+      "module_id": "CVAR50",
+      "topk_boost": 1.0,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.2,
+      "cvar_q": 0.5,
+      "amplitude_augmentation": false
+    },
+    {
+      "module_id": "TOP2_CVAR25",
+      "topk_boost": 2,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.25,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": false
+    },
+    {
+      "module_id": "AUG",
+      "topk_boost": 1.0,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.0,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": true
+    },
+    {
+      "module_id": "TOP2_AUG",
+      "topk_boost": 2,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.0,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": true
+    },
+    {
+      "module_id": "TOP2_CVAR25_AUG",
+      "topk_boost": 2,
+      "listwise_lambda": 0.0,
+      "cvar_eta": 0.25,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": true
+    },
+    {
+      "module_id": "DVR_FULL",
+      "topk_boost": 2,
+      "listwise_lambda": 0.1,
+      "cvar_eta": 0.25,
+      "cvar_q": 0.25,
+      "amplitude_augmentation": true
+    }
+  ],
+  "view_matrix_sha256": "f572549751d266cb98a5c8929216d33bfdbed23b6f0c6339c8426d0d14ed788d",
+  "module_matrix_sha256": "0568e813807360346e09587031cf103b01ecad3deb049baf71ad30676c5c1447",
+  "features": "D1 originalP5 12 LP725 statistics; D2 originalP4 four-channel12 statistics; REL=robust median/MADz plus centered optical percentile ranks (24), ABS12, optional POS32 categories",
+  "gates": "apply AFTER training-only StandardScaler; relative gate1 or.25, position gate always.25; not selected from validation/test groups",
+  "W1_selection": "per outer context independently pick highest equal-independent-group inner-CV Top25 gain, then rho, overlap, then lower feature count and viewID; ABS included",
+  "W2_selection": "joint maximin normalized relative gain: own outer-TRAIN inner-CV plus OTHER dataset ALL-development inner-CV (separately trained); baseline always inner-CV ABS; maximize min(relativeD1,relativeD2), then mean, then fewer active modules, moduleID. Denominator max(abs(baselineGain),.1). Other dataset metrics contain no own-dataset outer validation labels, and views are selected independently before joint module ranking",
+  "joint_development_disclosure": "Both datasets development labels inform method selection; NOT untuned external validation; weights never pooled or transferred. D1/D2 differentouterfold counts; other-dataset full training-context evidence only",
+  "final_endpoints": [
+    "W1_SELECTED",
+    "DVR_SELECTED"
+  ],
+  "W3_ablations": [
+    "ABS_ERM",
+    "REL_ERM",
+    "DUAL_ERM",
+    "POS_DUAL_ERM",
+    "TOPK_ONLY",
+    "ROBUST_ONLY",
+    "AUG_ONLY",
+    "LIST_ONLY",
+    "NO_TOPK",
+    "NO_ROBUST",
+    "NO_AUGMENT",
+    "NO_LISTWISE",
+    "NEGCTRL_SHUFFLED_HALF"
+  ],
+  "ablation_rule": "predeclared diagnostics, not eligible final candidates; use selected view/module in each OUTER TRAIN context and remove one module; ordinary/TopK comparisons same view; negative control fixed DUAL-only BASE and shuffle half training independentgroups within each unit",
+  "forced_on_ablations": "TOPK_ONLY uses selected boost if>1 else2; ROBUST_ONLY uses selected eta/q if active else.25/.25; AUG_ONLY fixed .95/1.05; LIST_ONLY lambda.1; no-module variants identical to selected method if corresponding selected module was already off, explicitly report ties",
+  "pair_tolerance": "unchanged D1 abs(deltaPCE)>0.5 / D2>=0.5; all evaluation rows retained; pair identity fixed across optical views and TopK weights",
+  "topk_weights": "boost1/2/4 only cross-training-true-Topceil(n/4) boundary pairs; renormalize within each experiment to preserve original date/substrate contribution; symmetric pairs, no pair sampling",
+  "ordinary_estimator": {
+    "C": 1.0,
+    "fit_intercept": false,
+    "solver": "lbfgs",
+    "tol": 1e-08,
+    "max_iter": 2000
+  },
+  "custom_solver": {
+    "method": "L-BFGS-B",
+    "maxiter": 400,
+    "gtol": 1e-06,
+    "ftol": 1e-11,
+    "maxls": 40
+  },
+  "custom_objective": "group mean of (1-lambda)*pair logistic +lambda*soft-target list CE, plus smooth CVaR blend and same C1 regularizer1/(2*NoriginalPairs); derivative tested. CVaR softplus temp.05; independent group=sub/date, experiments equal within date. Effective risk coefficient bound <=1-eta+eta/q<=1.75",
+  "soft_list_target": "training sigmoid((PCE-midpoint trueTopk boundary)/.5pp), normalize unit sum1; output softmax score temperature1; labels only train; no validation/test target construction",
+  "amplitude_augmentation": "training original +global gain.95 +gain1.05 views, all real channels/time multiplied together; D1 dimensionless argmax/relativechange unchanged; fit scaler original only, transform each copy separately; preserve total original pair weight and regularization, no added evaluation rows",
+  "negative_control": "half independent TRAIN groups selected by seededSHA256; within each unit shuffle optical statistics among region IDs, preserve targets and all candidate rows; negative control only, never final selection",
+  "metrics": [
+    "top25_gain_pp",
+    "rho",
+    "top25_overlap",
+    "top25_regret_pp"
+  ],
+  "primary": "Top25 gain",
+  "k": "ceil(n/4)",
+  "aggregation": "D1 substrate equal, D2 experiment equal then date equal",
+  "bootstrap": {
+    "replicates": 10000,
+    "unit": "D1substrate/D2date",
+    "seed": 20261019,
+    "meaning": "descriptive reused-group intervals"
+  },
+  "budgets_seconds": {
+    "W1": 10800,
+    "W2": 18000,
+    "W3": 18000
+  },
+  "threads": 1,
+  "M4": "NOT_RUN_OPTIONAL: no default neural expansion; bounded hand-feature W1/W2 and full frozen nested W3 prioritized, no new architecture search",
+  "checkpoint_policy": "each completed stage writes CSV/config checkpoint; second full run deterministic replay with same all-inner-search and outer predictions; only runtime/resource receipts excluded comparison",
+  "history_policy": "no new-candidate historical prediction until W3 selections/protocol freeze; then once descriptive evaluation, secondrun exact replay; do not select/history-tune",
+  "no_P8": true
+}

@@ -1,0 +1,341 @@
+{
+  "version": "1.0",
+  "created_UTC": "2026-10-20T07:39:02.015581+00:00",
+  "git_head": "6704d79e9d3256f7210214debdf0ae58f9c428ee",
+  "model_seed": 20261019,
+  "meta_seed": 20261020,
+  "base": "exact P6 PAIR_ABS;12 absolute optical statistics; C1 original pair model",
+  "auxiliary": [
+    "POS=exact P6 ID_PAIRWISE",
+    "TREE=exact P6 EXTRATREES_PL"
+  ],
+  "AUX_LAMBDARANK": "NOT_RUN_OPTIONAL: constrain auxiliary search to2; existing LambdaRank remains standalone strong control with frozen verified OOF, no new dependency",
+  "data": {
+    "D1": {
+      "data_directory": "perovskite-ai-research/research/pl_public_data_pilot_01/data_external/D1",
+      "train_file": {
+        "name": "training_extracted_features_and_labels.h5",
+        "bytes": 10138216,
+        "sha256": "998c3f7e680082881cfd73ea20c82c6045ae4ebae8c556e6296120cd64662032"
+      },
+      "test_file": {
+        "name": "test_extracted_features_and_labels.h5",
+        "bytes": 5119912,
+        "sha256": "8e55611f29ddadb3c87c536c8b11db4a9f1306175e8433903c482965156a0dd5"
+      },
+      "folds": "author foldNo0..4, substrate constant",
+      "scope_dev": "D1_DEVELOPMENT_PREVIOUSLY_ACCESSED",
+      "scope_test": "D1_AUTHOR_TEST_PREVIOUSLY_INSPECTED",
+      "features": "P5 exact12 absolute+same12 relative by substrate; common24 for all PL-only models; IDPL56; ID32",
+      "pair_tolerance": "strict >0.5",
+      "baseline_source": "research/pl_public_data_pilot_05_d1_validation"
+    },
+    "D2": {
+      "data_path": "perovskite-ai-research/data/raw/kit_pl_2025/data.h5",
+      "data_sha256": "050bf429ae6145f0201b940a25c6b89c5cb1fcdf961adc310fe3a0037f436f05",
+      "data_bytes": 354689616,
+      "features_path": "research/pl_public_data_pilot_02/results/extracted_features.csv",
+      "features_sha256": "8bae9d68be45076d2eab5f59c7a047c536b9b5a75e6916717714b7ed98aa92be",
+      "development_dates": [
+        20230425,
+        20230502,
+        20230510,
+        20230516,
+        20230524,
+        20230531,
+        20230607,
+        20230613,
+        20230627,
+        20230704,
+        20230717,
+        20230808,
+        20230816,
+        20230822
+      ],
+      "outer_validation_dates": [
+        [
+          20230425,
+          20230808
+        ],
+        [
+          20230502,
+          20230627
+        ],
+        [
+          20230510,
+          20230822
+        ],
+        [
+          20230516,
+          20230717
+        ],
+        [
+          20230524,
+          20230816
+        ],
+        [
+          20230531,
+          20230704
+        ],
+        [
+          20230607,
+          20230613
+        ]
+      ],
+      "history_dates": [
+        20230829,
+        20230905,
+        20230912
+      ],
+      "scope_dev": "D2_DEVELOPMENT_REUSED_DATES",
+      "scope_test": "D2_HISTORY_PREVIOUSLY_INSPECTED",
+      "features": "P4 exact4channels mean/last/relative-index-slope, 12 absolute or12relative; common REL12 main; IDPL44",
+      "pair_tolerance": ">=0.5",
+      "baseline_source": "research/pl_public_data_pilot_04_position_audit"
+    }
+  },
+  "P6_bundle_sha256": "a91b669f2c5e96613531907cb0cd65d5dae5d6bf10698236d77afe23d01322a3",
+  "P7_bundle_sha256": "683d9b62eee85b473c70e94161e719d30da104ed39cc320403258419ecabb87a",
+  "historical_reference_precision": "P6/P7 frozen predictions remain their original12 significant digits; P8 saves17 digits, never refits reference predictions from test labels",
+  "W1": [
+    {
+      "model_id": "NOOP",
+      "wave": "W1",
+      "kind": "FIXED",
+      "aux": "POS",
+      "weight": 0.0,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": true,
+      "complexity": 0
+    },
+    {
+      "model_id": "FIX_POS_10",
+      "wave": "W1",
+      "kind": "FIXED",
+      "aux": "POS",
+      "weight": 0.1,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": true,
+      "complexity": 1
+    },
+    {
+      "model_id": "FIX_POS_25",
+      "wave": "W1",
+      "kind": "FIXED",
+      "aux": "POS",
+      "weight": 0.25,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": true,
+      "complexity": 1
+    },
+    {
+      "model_id": "FIX_POS_50",
+      "wave": "W1",
+      "kind": "FIXED",
+      "aux": "POS",
+      "weight": 0.5,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": false,
+      "complexity": 1
+    },
+    {
+      "model_id": "FIX_TREE_10",
+      "wave": "W1",
+      "kind": "FIXED",
+      "aux": "TREE",
+      "weight": 0.1,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": true,
+      "complexity": 1
+    },
+    {
+      "model_id": "FIX_TREE_25",
+      "wave": "W1",
+      "kind": "FIXED",
+      "aux": "TREE",
+      "weight": 0.25,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": true,
+      "complexity": 1
+    },
+    {
+      "model_id": "FIX_TREE_50",
+      "wave": "W1",
+      "kind": "FIXED",
+      "aux": "TREE",
+      "weight": 0.5,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": false,
+      "complexity": 1
+    }
+  ],
+  "W2": [
+    {
+      "model_id": "RULE_POS_25",
+      "wave": "W2",
+      "kind": "RULE",
+      "aux": "POS",
+      "weight": 0.25,
+      "threshold": 0.25,
+      "cap": false,
+      "eligible": true,
+      "complexity": 2
+    },
+    {
+      "model_id": "RULE_POS_75",
+      "wave": "W2",
+      "kind": "RULE",
+      "aux": "POS",
+      "weight": 0.25,
+      "threshold": 0.75,
+      "cap": false,
+      "eligible": true,
+      "complexity": 2
+    },
+    {
+      "model_id": "LEARNED_POS",
+      "wave": "W2",
+      "kind": "LEARNED",
+      "aux": "POS",
+      "weight": 0.25,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": true,
+      "complexity": 3
+    },
+    {
+      "model_id": "LEARNED_POS_CAP",
+      "wave": "W2",
+      "kind": "LEARNED",
+      "aux": "POS",
+      "weight": 0.25,
+      "threshold": 0.0,
+      "cap": true,
+      "eligible": true,
+      "complexity": 4
+    },
+    {
+      "model_id": "RULE_TREE_25",
+      "wave": "W2",
+      "kind": "RULE",
+      "aux": "TREE",
+      "weight": 0.25,
+      "threshold": 0.25,
+      "cap": false,
+      "eligible": true,
+      "complexity": 2
+    },
+    {
+      "model_id": "RULE_TREE_75",
+      "wave": "W2",
+      "kind": "RULE",
+      "aux": "TREE",
+      "weight": 0.25,
+      "threshold": 0.75,
+      "cap": false,
+      "eligible": true,
+      "complexity": 2
+    },
+    {
+      "model_id": "LEARNED_TREE",
+      "wave": "W2",
+      "kind": "LEARNED",
+      "aux": "TREE",
+      "weight": 0.25,
+      "threshold": 0.0,
+      "cap": false,
+      "eligible": true,
+      "complexity": 3
+    },
+    {
+      "model_id": "LEARNED_TREE_CAP",
+      "wave": "W2",
+      "kind": "LEARNED",
+      "aux": "TREE",
+      "weight": 0.25,
+      "threshold": 0.0,
+      "cap": true,
+      "eligible": true,
+      "complexity": 4
+    }
+  ],
+  "primary_normalization": "within-candidate-unit average percentile rank (r-1)/(n-1), singleton0; label-free, ties preserved, constant=>.5 when n>1",
+  "raw_normalization": "diagnostic only fixed lambda.25 per auxiliary, never selection",
+  "outer_folds": "unchanged authorD1 foldNo0..4 / originalD2 seven date folds",
+  "selection_folds": 3,
+  "gate_crossfit_folds": 3,
+  "nested_protocol": "For each OUTER TRAIN T, selection split U/V by independent group GKF3. Build fresh GKF3 base/aux OOF on U only to train gate; fit base/aux on U and predict V; no V label in any gate-training OOF source. Select using V metrics over all3 selection folds. Final gate trains on newly crossfit T-only OOF, base/aux fit T and predict outer validation. ALL-development context uses identical procedure for historical evaluation.",
+  "gate_features": [
+    "score_spearman",
+    "top25_model_overlap",
+    "optical_robust_dispersion",
+    "base_boundary_margin",
+    "log_candidate_count"
+  ],
+  "gate_feature_scope": "D1 substrate / D2 experiment; optical dispersion uses all available optical regions in same unit; score context uses frozen candidate IDs, no label values",
+  "gate_model": {
+    "family": "Ridge",
+    "alpha": 10.0,
+    "fit_intercept": true,
+    "solver": "svd",
+    "preprocessing": "StandardScaler fit weighted TRAIN OOF meta rows only",
+    "weights": "each independent TRAIN group equal; experiments equal within date, normalized mean1",
+    "supervision": "TRAIN-ONLY cross-fitted gain(fixed rank blend lambda.25)-gain(base)",
+    "lambda_map": "0.25*clip(predicted_delta_gain_pp/0.5,0,1)",
+    "minimum_independent_groups": 6,
+    "degenerate_target": "all abs(delta)<=1e-10 => declared NOOP_ZERO_TARGET"
+  },
+  "rule_gate": "lambda.25 iff unlabeled base-aux Spearman<=threshold .25/.75, threshold choice only training-internal selection CV; constant predictions have correlation0, singleton disables correction",
+  "cap": "max changed Top25 members=floor(.25*k); try requested lambda then halve up to16 times, else0; never true PCE; <=.25 for all eligible methods; lambda.5 pressure fixed is ineligible",
+  "negative_control": "Only gate-training OOF meta features permuted across independent groups by seeded cyclic derangement; unequal experiment counts mapped cyclically from source group rows; targets and date weights unchanged; base/aux optical scores never shuffled. Not eligible final selection.",
+  "ablations": [
+    "RAW_FIXED_25_PER_AUX",
+    "NO_DISAGREEMENT_FEATURES_PER_AUX",
+    "NEGATIVE_META_PERMUTATION_PER_AUX",
+    "aux-alone",
+    "gate-off fixed blends",
+    "learned cap-off/on"
+  ],
+  "selection_order": [
+    "mean Top25 gain descending",
+    "q10 paired gain descending",
+    "severe delta<-0.5 count ascending",
+    "Spearman descending",
+    "complexity ascending",
+    "model_id lexicographic"
+  ],
+  "selection_precision": 1e-10,
+  "NOOP_rule": "If no eligible candidate exceeds own internal-CV NOOP mean gain by1e-10, choose NOOP. No outer/history feedback. One final endpoint P8_SELECTED; family-selected diagnostics and all frozen candidates are not retrospectively selectable.",
+  "tail_metrics": {
+    "severe_delta_pp": -0.5,
+    "lower_quantile": 0.1,
+    "cvar_fraction": 0.2,
+    "cvar_n": "ceil(.2*n independent groups)",
+    "unit": "D1 substrate / D2 date after experiment equal averaging"
+  },
+  "history_policy": "all previously inspected; full protocol/selection frozen first, then save unlabeled inference and merge scoring-only labels; replay identical second run",
+  "joint_method_development": "same preregistered template inspired by both datasets history, but P8 numerical candidate selection is separate per dataset; no shared weights or jointly optimized candidate score",
+  "budgets": {
+    "per_run_wall_seconds": 14400,
+    "two_run_wall_seconds": 28800,
+    "target_peak_MiB": 8192,
+    "threads_per_process": 1
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261020,
+    "unit": "substrate/date",
+    "meaning": "descriptive DEVELOPMENT_REUSED, never new blind validation"
+  },
+  "output_float_precision": "%.17g",
+  "no_P9": true,
+  "W0_target_serialization_atol": 1e-10,
+  "W0_target_integrity": "Raw H5 exact hashes unchanged; 12-digit published CSV target comparison tolerates serialization only, full score tolerance1e-8 and Top25 exact IDs remain mandatory"
+}

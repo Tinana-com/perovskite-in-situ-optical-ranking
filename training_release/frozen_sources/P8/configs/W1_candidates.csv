@@ -1,0 +1,8 @@
+model_id,wave,kind,aux,weight,threshold,cap,eligible,complexity
+NOOP,W1,FIXED,POS,0.0,0.0,False,True,0
+FIX_POS_10,W1,FIXED,POS,0.1,0.0,False,True,1
+FIX_POS_25,W1,FIXED,POS,0.25,0.0,False,True,1
+FIX_POS_50,W1,FIXED,POS,0.5,0.0,False,False,1
+FIX_TREE_10,W1,FIXED,TREE,0.1,0.0,False,True,1
+FIX_TREE_25,W1,FIXED,TREE,0.25,0.0,False,True,1
+FIX_TREE_50,W1,FIXED,TREE,0.5,0.0,False,False,1

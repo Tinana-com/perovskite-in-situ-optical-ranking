@@ -1,0 +1,397 @@
+{
+  "D1_OUTER_0": {
+    "dataset": "D1",
+    "outer_fold": 0,
+    "training_groups": [
+      "ACB",
+      "ACC",
+      "ACD",
+      "ACF",
+      "ACH",
+      "ACK",
+      "ACL",
+      "ADD",
+      "ADI",
+      "ADK",
+      "ADL",
+      "ADM",
+      "ADS",
+      "ADV",
+      "AEC",
+      "AED",
+      "AEF",
+      "AEG",
+      "AEI",
+      "AEM"
+    ],
+    "outer_validation_groups": [
+      "ACA",
+      "ACM",
+      "ADA",
+      "ADG",
+      "ADP",
+      "AEK"
+    ]
+  },
+  "D1_OUTER_1": {
+    "dataset": "D1",
+    "outer_fold": 1,
+    "training_groups": [
+      "ACA",
+      "ACD",
+      "ACF",
+      "ACK",
+      "ACL",
+      "ACM",
+      "ADA",
+      "ADD",
+      "ADG",
+      "ADI",
+      "ADL",
+      "ADM",
+      "ADP",
+      "ADS",
+      "ADV",
+      "AEC",
+      "AED",
+      "AEF",
+      "AEG",
+      "AEK",
+      "AEM"
+    ],
+    "outer_validation_groups": [
+      "ACB",
+      "ACC",
+      "ACH",
+      "ADK",
+      "AEI"
+    ]
+  },
+  "D1_OUTER_2": {
+    "dataset": "D1",
+    "outer_fold": 2,
+    "training_groups": [
+      "ACA",
+      "ACB",
+      "ACC",
+      "ACH",
+      "ACK",
+      "ACL",
+      "ACM",
+      "ADA",
+      "ADD",
+      "ADG",
+      "ADK",
+      "ADL",
+      "ADP",
+      "ADS",
+      "ADV",
+      "AEC",
+      "AED",
+      "AEG",
+      "AEI",
+      "AEK",
+      "AEM"
+    ],
+    "outer_validation_groups": [
+      "ACD",
+      "ACF",
+      "ADI",
+      "ADM",
+      "AEF"
+    ]
+  },
+  "D1_OUTER_3": {
+    "dataset": "D1",
+    "outer_fold": 3,
+    "training_groups": [
+      "ACA",
+      "ACB",
+      "ACC",
+      "ACD",
+      "ACF",
+      "ACH",
+      "ACK",
+      "ACL",
+      "ACM",
+      "ADA",
+      "ADD",
+      "ADG",
+      "ADI",
+      "ADK",
+      "ADL",
+      "ADM",
+      "ADP",
+      "AEC",
+      "AEF",
+      "AEI",
+      "AEK"
+    ],
+    "outer_validation_groups": [
+      "ADS",
+      "ADV",
+      "AED",
+      "AEG",
+      "AEM"
+    ]
+  },
+  "D1_OUTER_4": {
+    "dataset": "D1",
+    "outer_fold": 4,
+    "training_groups": [
+      "ACA",
+      "ACB",
+      "ACC",
+      "ACD",
+      "ACF",
+      "ACH",
+      "ACM",
+      "ADA",
+      "ADG",
+      "ADI",
+      "ADK",
+      "ADM",
+      "ADP",
+      "ADS",
+      "ADV",
+      "AED",
+      "AEF",
+      "AEG",
+      "AEI",
+      "AEK",
+      "AEM"
+    ],
+    "outer_validation_groups": [
+      "ACK",
+      "ACL",
+      "ADD",
+      "ADL",
+      "AEC"
+    ]
+  },
+  "D1_ALL": {
+    "dataset": "D1",
+    "outer_fold": -1,
+    "training_groups": [
+      "ACA",
+      "ACB",
+      "ACC",
+      "ACD",
+      "ACF",
+      "ACH",
+      "ACK",
+      "ACL",
+      "ACM",
+      "ADA",
+      "ADD",
+      "ADG",
+      "ADI",
+      "ADK",
+      "ADL",
+      "ADM",
+      "ADP",
+      "ADS",
+      "ADV",
+      "AEC",
+      "AED",
+      "AEF",
+      "AEG",
+      "AEI",
+      "AEK",
+      "AEM"
+    ],
+    "outer_validation_groups": [
+      "ACE",
+      "ACG",
+      "ACI",
+      "ADB",
+      "ADF",
+      "ADH",
+      "ADT",
+      "AEA",
+      "AEB",
+      "AEE",
+      "AEH",
+      "AEL"
+    ]
+  },
+  "D2_OUTER_0": {
+    "dataset": "D2",
+    "outer_fold": 0,
+    "training_groups": [
+      "20230502",
+      "20230510",
+      "20230516",
+      "20230524",
+      "20230531",
+      "20230607",
+      "20230613",
+      "20230627",
+      "20230704",
+      "20230717",
+      "20230816",
+      "20230822"
+    ],
+    "outer_validation_groups": [
+      "20230425",
+      "20230808"
+    ]
+  },
+  "D2_OUTER_1": {
+    "dataset": "D2",
+    "outer_fold": 1,
+    "training_groups": [
+      "20230425",
+      "20230510",
+      "20230516",
+      "20230524",
+      "20230531",
+      "20230607",
+      "20230613",
+      "20230704",
+      "20230717",
+      "20230808",
+      "20230816",
+      "20230822"
+    ],
+    "outer_validation_groups": [
+      "20230502",
+      "20230627"
+    ]
+  },
+  "D2_OUTER_2": {
+    "dataset": "D2",
+    "outer_fold": 2,
+    "training_groups": [
+      "20230425",
+      "20230502",
+      "20230516",
+      "20230524",
+      "20230531",
+      "20230607",
+      "20230613",
+      "20230627",
+      "20230704",
+      "20230717",
+      "20230808",
+      "20230816"
+    ],
+    "outer_validation_groups": [
+      "20230510",
+      "20230822"
+    ]
+  },
+  "D2_OUTER_3": {
+    "dataset": "D2",
+    "outer_fold": 3,
+    "training_groups": [
+      "20230425",
+      "20230502",
+      "20230510",
+      "20230524",
+      "20230531",
+      "20230607",
+      "20230613",
+      "20230627",
+      "20230704",
+      "20230808",
+      "20230816",
+      "20230822"
+    ],
+    "outer_validation_groups": [
+      "20230516",
+      "20230717"
+    ]
+  },
+  "D2_OUTER_4": {
+    "dataset": "D2",
+    "outer_fold": 4,
+    "training_groups": [
+      "20230425",
+      "20230502",
+      "20230510",
+      "20230516",
+      "20230531",
+      "20230607",
+      "20230613",
+      "20230627",
+      "20230704",
+      "20230717",
+      "20230808",
+      "20230822"
+    ],
+    "outer_validation_groups": [
+      "20230524",
+      "20230816"
+    ]
+  },
+  "D2_OUTER_5": {
+    "dataset": "D2",
+    "outer_fold": 5,
+    "training_groups": [
+      "20230425",
+      "20230502",
+      "20230510",
+      "20230516",
+      "20230524",
+      "20230607",
+      "20230613",
+      "20230627",
+      "20230717",
+      "20230808",
+      "20230816",
+      "20230822"
+    ],
+    "outer_validation_groups": [
+      "20230531",
+      "20230704"
+    ]
+  },
+  "D2_OUTER_6": {
+    "dataset": "D2",
+    "outer_fold": 6,
+    "training_groups": [
+      "20230425",
+      "20230502",
+      "20230510",
+      "20230516",
+      "20230524",
+      "20230531",
+      "20230627",
+      "20230704",
+      "20230717",
+      "20230808",
+      "20230816",
+      "20230822"
+    ],
+    "outer_validation_groups": [
+      "20230607",
+      "20230613"
+    ]
+  },
+  "D2_ALL": {
+    "dataset": "D2",
+    "outer_fold": -1,
+    "training_groups": [
+      "20230425",
+      "20230502",
+      "20230510",
+      "20230516",
+      "20230524",
+      "20230531",
+      "20230607",
+      "20230613",
+      "20230627",
+      "20230704",
+      "20230717",
+      "20230808",
+      "20230816",
+      "20230822"
+    ],
+    "outer_validation_groups": [
+      "20230829",
+      "20230905",
+      "20230912"
+    ]
+  }
+}

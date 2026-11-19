@@ -1,0 +1,19 @@
+{
+  "release_status": "TRAINING_REPRODUCTION_PACKAGE_PREPARED",
+  "tests_passed": 57,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "formal_new_supervised_training_runs": 0,
+  "full_new_training_replay": "NOT_RUN",
+  "scientific_results_changed": false,
+  "all12_training_fold_pair_id_hashes_match_original": true,
+  "training_scalers_match_archived": true,
+  "D2_raw_cache_byte_identical": true,
+  "P7_P8_P9_import_and_IO_dry_runs": "PASS",
+  "P9_cache_IO_patch_only": true,
+  "frozen_function_AST_preserved": true,
+  "historical_sources_unchanged": 183,
+  "tracked_files_unchanged": true,
+  "GitHub_uploaded": false,
+  "scope": "raw preparation, original training implementation, portable model/baseline adapters, saved-model prediction, OOF scoring, optional original supplementary procedures; supervised dispatch tests use mocks"
+}

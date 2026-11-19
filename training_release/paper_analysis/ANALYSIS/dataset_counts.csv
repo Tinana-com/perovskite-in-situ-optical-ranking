@@ -1,0 +1,5 @@
+dataset,phase,regions,selection_units,independent_evaluation_groups,zero_PCE_regions,min_group_size,max_group_size
+D1,development,780,26,26,1,16,32
+D1,historical,349,12,12,0,20,32
+D2,development,4707,158,14,33,9,32
+D2,historical,1150,36,3,2,31,32

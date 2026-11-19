@@ -1,0 +1,13 @@
+module_id,topk_boost,listwise_lambda,cvar_eta,cvar_q,amplitude_augmentation
+BASE,1.0,0.0,0.0,0.25,False
+TOP2,2.0,0.0,0.0,0.25,False
+TOP4,4.0,0.0,0.0,0.25,False
+LIST10,1.0,0.1,0.0,0.25,False
+TOP2_LIST10,2.0,0.1,0.0,0.25,False
+CVAR25,1.0,0.0,0.25,0.25,False
+CVAR50,1.0,0.0,0.2,0.5,False
+TOP2_CVAR25,2.0,0.0,0.25,0.25,False
+AUG,1.0,0.0,0.0,0.25,True
+TOP2_AUG,2.0,0.0,0.0,0.25,True
+TOP2_CVAR25_AUG,2.0,0.0,0.25,0.25,True
+DVR_FULL,2.0,0.1,0.25,0.25,True
